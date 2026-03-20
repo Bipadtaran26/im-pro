@@ -1,0 +1,110 @@
+.main {
+  height: 100vh;
+  display: flex; /* Changed from block to flex */
+  padding: 20px;
+  gap: 20px; /* Adds space between form and notes */
+  box-sizing: border-box;
+}
+
+/* Optional: Stack them vertically on mobile screens */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+  .form-item {
+    width: 100% !important;
+  }
+}
+
+.form-item {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  width: 700px; 
+  flex-shrink: 0; 
+}
+
+input {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  width: 100%; /* Changed from 50% to 100% */
+  font-size: medium;
+  box-sizing: border-box; /* Ensures padding fits inside width */
+}
+
+textarea {
+  height: 64px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  width: 100%; /* Changed from 50% to 100% */
+  font-size: medium;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  width: 100%; /* Changed from 50% to 100% */
+  cursor: pointer; /* Adds pointer on hover */
+}
+
+/* New container for the notes on the right */
+.notes-container {
+  flex: 1; /* Takes up all remaining width */
+  border-left: 3px solid black;
+   /* Allows cards to wrap to next line */
+  align-content: flex-start; /* Aligns cards to top */
+   /* Space between cards */
+  padding: 10px;
+  background-color: #ffffff; /* Optional: slight background to see the area */
+  border-radius: 1px;
+}
+.card-div{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+  overflow: auto;
+}
+.card {
+  height: 200px;
+  width: 170px; /* Adjusted width slightly */
+  border-radius: 4px;
+  padding: 8px;
+  background-color: rgb(106, 229, 229);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: slight shadow */
+}
+.card h3{
+  line-height: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.delete-btn{
+
+border-radius: 10px;
+border: none;
+background-color: #ff4d4d; 
+color: white;
+padding: 8px 16px;
+cursor: pointer;
+font-size: 14px;
+}
